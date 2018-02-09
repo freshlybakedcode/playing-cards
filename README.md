@@ -1,22 +1,7 @@
 ## Webapp boiler plate
 
-### Whatcha got?
-Boiler plate set up with Gulp as a task runner.
-
-<i>Development:</i>
-* Start a server with BrowserSync for hot reloading of HTML/CSS/JS
-* Watch and compile SCSS to CSS
-* Auto-prefix CSS
-
-<i>Distribution</i>
-* Concatenate all CSS and JS
-* Transpile ES2015 -> ES5
-* Minify JavaScript
-* Strip console.logs from JavaScript
-* Compile SCSS to CSS
-* Auto-prefix CSS
-* Minify CSS
-* Optimise images
+### What is this?
+Something to do with playing cards
 
 ### How to use
 * Clone
@@ -27,4 +12,4 @@ Boiler plate set up with Gulp as a task runner.
 * `gulp build`
 
 ### To deploy distribution files to Github pages:
-* `gulp deploy-ghp`
+* `gulp deploy-ghp` TODO: Add link
