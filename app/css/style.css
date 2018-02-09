@@ -22,17 +22,57 @@ h1 {
   .card.hearts, .card.diamonds {
     color: red; }
   .card.clubs .top:after,
-  .card.clubs .bottom:after {
+  .card.clubs .bottom:after,
+  .card.clubs .middle span:after {
     content: "♣"; }
+  .card.clubs .middle span.jack:after {
+    content: "jack"; }
+  .card.clubs .middle span.queen:after {
+    content: "queen"; }
+  .card.clubs .middle span.king:after {
+    content: "king"; }
   .card.diamonds .top:after,
-  .card.diamonds .bottom:after {
+  .card.diamonds .bottom:after,
+  .card.diamonds .middle span:after {
     content: "♦"; }
+  .card.diamonds .middle span.jack:after {
+    content: "jack"; }
+  .card.diamonds .middle span.queen:after {
+    content: "queen"; }
+  .card.diamonds .middle span.king:after {
+    content: "king"; }
   .card.hearts .top:after,
-  .card.hearts .bottom:after {
+  .card.hearts .bottom:after,
+  .card.hearts .middle span:after {
     content: "♥"; }
+  .card.hearts .middle span.jack:after {
+    content: "jack"; }
+  .card.hearts .middle span.queen:after {
+    content: "queen"; }
+  .card.hearts .middle span.king:after {
+    content: "king"; }
   .card.spades .top:after,
-  .card.spades .bottom:after {
+  .card.spades .bottom:after,
+  .card.spades .middle span:after {
     content: "♠"; }
+  .card.spades .middle span.jack:after {
+    content: "jack"; }
+  .card.spades .middle span.queen:after {
+    content: "queen"; }
+  .card.spades .middle span.king:after {
+    content: "king"; }
+
+._2 .middle,
+._3 .middle {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around; }
 
 .top,
 .bottom {
@@ -52,10 +92,13 @@ h1 {
     display: block; }
 
 .middle {
-  padding: 2.5em 2em;
   margin: 0 1em;
-  display: block;
-  border: 1px solid #eee; }
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border: 1px solid #eee;
+  width: 10vw;
+  height: 15vw; }
 
 .bottom {
   -webkit-transform: rotate(180deg);

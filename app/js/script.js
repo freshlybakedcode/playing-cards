@@ -32,12 +32,24 @@ const createUI = function createUI(deck, insertPosition) {
     deck.forEach(function(element) {
         // create a new div element 
         const newCard = document.createElement("div");
+        let symbols = '';
+        if (element.value < 11) {
+            for (i = 0; i < element.value; i++) {
+                symbols += `<span></span>`;
+            };
+        } else if (element.value === 11) {
+            symbols = `<span class="jack"></span>`;
+        } else if (element.value === 12) {
+            symbols = `<span class="queen"></span>`;
+        } else if (element.value === 13) {
+            symbols = `<span class="king"></span>`;
+        }
         newCard.id = element.face + element.suit;
-        newCard.classList = `card ${element.face} ${element.suit}`;
+        newCard.classList = `card _${element.face} ${element.suit}`;
         newCard.setAttribute('data-value', element.value);
         newCard.innerHTML = `
             <span class="top">${element.face}</span>
-            <span class="middle"></span>
+            <span class="middle">${symbols}</span>
             <span class="bottom">${element.face}</span>
         `;
         //Insert it into defined div
