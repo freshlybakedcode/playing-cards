@@ -7,3 +7,83 @@ h1 {
 	font-size: 2em;
 	text-align: center;
 }
+
+$club:		'\2663';
+$diamond:	'\2666';
+$heart:		'\2665';
+$spade: 	'\2660';
+
+.card {
+	border: 1px solid #ccc;
+	border-radius: 3px;
+	float: left;
+	padding: 0.1em;
+	margin: 0.5em;
+	box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.2);
+	span {
+	}
+	&.clubs,
+	&.spades {
+		color: black;
+	}
+	&.hearts,
+	&.diamonds {
+		color: red;
+	}
+	&.clubs {
+		.top, 
+		.bottom {
+			&:after {
+				content: $club;
+			}
+		}
+	}
+	&.diamonds {
+		.top, 
+		.bottom {
+			&:after {
+				content: $diamond;
+			}
+		}
+	}
+	&.hearts {
+		.top, 
+		.bottom {
+			&:after {
+				content: $heart;
+			}
+		}
+	}
+	&.spades {
+		.top, 
+		.bottom {
+			&:after {
+				content: $spade;
+			}
+		}
+	}
+}
+
+.top,
+.bottom {
+	width: 20%;
+	&:after {
+		display: block;
+	}
+	display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.top {
+
+}
+.middle {
+	padding: 2.5em 2em;
+	margin: 0 1em;
+	display: block;
+	border: 1px solid #eee;
+}
+.bottom {
+	transform: rotate(180deg);
+	float: right;
+}
