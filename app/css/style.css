@@ -79,7 +79,8 @@ h1 {
 ._5 .middle,
 ._6 .middle,
 ._7 .middle,
-._8 .middle {
+._8 .middle,
+._9 .middle {
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
@@ -96,7 +97,8 @@ h1 {
   ._5 .middle span,
   ._6 .middle span,
   ._7 .middle span,
-  ._8 .middle span {
+  ._8 .middle span,
+  ._9 .middle span {
     -ms-flex-preferred-size: 50%;
         flex-basis: 50%;
     -webkit-box-orient: horizontal;
@@ -113,7 +115,8 @@ h1 {
   ._5 .middle span:nth-child(2n),
   ._6 .middle span:nth-child(2n),
   ._7 .middle span:nth-child(2n),
-  ._8 .middle span:nth-child(2n) {
+  ._8 .middle span:nth-child(2n),
+  ._9 .middle span:nth-child(2n) {
     text-align: right;
     -webkit-box-pack: end;
         -ms-flex-pack: end;
@@ -122,7 +125,8 @@ h1 {
   ._5 .middle span:nth-child(1n+3),
   ._6 .middle span:nth-child(1n+3),
   ._7 .middle span:nth-child(1n+3),
-  ._8 .middle span:nth-child(1n+3) {
+  ._8 .middle span:nth-child(1n+3),
+  ._9 .middle span:nth-child(1n+3) {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -191,6 +195,26 @@ h1 {
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end; }
+
+._9 .middle span:nth-child(5) {
+  position: absolute;
+  top: 40%;
+  left: 0;
+  right: 0;
+  margin: auto;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center; }
+
+._9 .middle span:nth-child(2n+6) {
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start; }
+
+._9 .middle span:nth-child(2n+7) {
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end; }
 
 .top,
 .bottom {

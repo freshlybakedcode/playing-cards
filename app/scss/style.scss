@@ -140,7 +140,8 @@ $spade: 	'\2660';
 ._5,
 ._6,
 ._7,
-._8 {
+._8,
+._9 {
 	.middle {
 		flex-direction: row;
 		flex-wrap: wrap;
@@ -214,6 +215,24 @@ $spade: 	'\2660';
 		}
 		span:nth-child(1n+7) {
 			align-items: flex-end;
+		}
+	}
+}
+._9 {
+	.middle {
+		span:nth-child(5) {
+			position: absolute;
+			top: 40%;
+			left: 0;
+			right: 0;
+			margin: auto;
+			justify-content: center;
+		}
+		span:nth-child(2n+6) {
+			justify-content: flex-start;
+		}
+		span:nth-child(2n+7) {
+			justify-content: flex-end;
 		}
 	}
 }
