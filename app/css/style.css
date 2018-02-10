@@ -16,7 +16,8 @@ h1 {
   padding: 0.1em;
   margin: 0.5em;
   -webkit-box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.2);
-          box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.2); }
+          box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.2);
+  font-family: Georgia, 'Times New Roman', Times, serif; }
   .card.clubs, .card.spades {
     color: black; }
   .card.hearts, .card.diamonds {
@@ -25,47 +26,39 @@ h1 {
   .card.clubs .bottom:after,
   .card.clubs .middle span:after {
     content: "♣"; }
-  .card.clubs .middle span.jack:after {
-    content: "jack"; }
-  .card.clubs .middle span.queen:after {
-    content: "queen"; }
-  .card.clubs .middle span.king:after {
-    content: "king"; }
   .card.diamonds .top:after,
   .card.diamonds .bottom:after,
   .card.diamonds .middle span:after {
     content: "♦"; }
-  .card.diamonds .middle span.jack:after {
-    content: "jack"; }
-  .card.diamonds .middle span.queen:after {
-    content: "queen"; }
-  .card.diamonds .middle span.king:after {
-    content: "king"; }
   .card.hearts .top:after,
   .card.hearts .bottom:after,
   .card.hearts .middle span:after {
     content: "♥"; }
-  .card.hearts .middle span.jack:after {
-    content: "jack"; }
-  .card.hearts .middle span.queen:after {
-    content: "queen"; }
-  .card.hearts .middle span.king:after {
-    content: "king"; }
   .card.spades .top:after,
   .card.spades .bottom:after,
   .card.spades .middle span:after {
     content: "♠"; }
-  .card.spades .middle span.jack:after {
-    content: "jack"; }
-  .card.spades .middle span.queen:after {
-    content: "queen"; }
-  .card.spades .middle span.king:after {
-    content: "king"; }
+  .card .middle span.jack:after {
+    content: "J"; }
+  .card .middle span.queen:after {
+    content: "Q"; }
+  .card .middle span.king:after {
+    content: "K"; }
 
+/* Individual layouts */
 ._A .middle span:after {
   font-size: 9vw; }
 
+._J .middle span:after,
+._Q .middle span:after,
+._K .middle span:after {
+  font-size: 12vw;
+  font-family: sans-serif; }
+
 ._A .middle,
+._J .middle,
+._Q .middle,
+._K .middle,
 ._2 .middle,
 ._3 .middle {
   -webkit-box-orient: vertical;

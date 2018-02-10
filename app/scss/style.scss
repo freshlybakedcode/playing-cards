@@ -20,6 +20,7 @@ $spade: 	'\2660';
 	padding: 0.1em;
 	margin: 0.5em;
 	box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.2);
+	font-family: Georgia, 'Times New Roman', Times, serif;
 	
 	&.clubs,
 	&.spades {
@@ -37,21 +38,6 @@ $spade: 	'\2660';
 				content: $club;
 			}
 		}
-		.middle span.jack {
-			&:after {
-				content: "jack";
-			}
-		}
-		.middle span.queen {
-			&:after {
-				content: "queen";
-			}
-		}
-		.middle span.king {
-			&:after {
-				content: "king";
-			}
-		}
 	}
 	&.diamonds {
 		.top, 
@@ -59,21 +45,6 @@ $spade: 	'\2660';
 		.middle span {
 			&:after {
 				content: $diamond;
-			}
-		}
-		.middle span.jack {
-			&:after {
-				content: "jack";
-			}
-		}
-		.middle span.queen {
-			&:after {
-				content: "queen";
-			}
-		}
-		.middle span.king {
-			&:after {
-				content: "king";
 			}
 		}
 	}
@@ -85,21 +56,6 @@ $spade: 	'\2660';
 				content: $heart;
 			}
 		}
-		.middle span.jack {
-			&:after {
-				content: "jack";
-			}
-		}
-		.middle span.queen {
-			&:after {
-				content: "queen";
-			}
-		}
-		.middle span.king {
-			&:after {
-				content: "king";
-			}
-		}
 	}
 	&.spades {
 		.top, 
@@ -109,29 +65,43 @@ $spade: 	'\2660';
 				content: $spade;
 			}
 		}
-		.middle span.jack {
-			&:after {
-				content: "jack";
-			}
+	}
+	.middle span.jack {
+		&:after {
+			content: "J";
 		}
-		.middle span.queen {
-			&:after {
-				content: "queen";
-			}
+	}
+	.middle span.queen {
+		&:after {
+			content: "Q";
 		}
-		.middle span.king {
-			&:after {
-				content: "king";
-			}
+	}
+	.middle span.king {
+		&:after {
+			content: "K";
 		}
 	}
 }
+
+/* Individual layouts */
 ._A {
 	.middle span:after {
 		font-size: 9vw;
 	}
 }
+._J,
+._Q,
+._K {
+	.middle span:after {
+		font-size: 12vw;
+		// text-shadow: 0px 0px 2px rgba(0, 0, 0, 0.5);
+		font-family: sans-serif;
+	}
+}
 ._A,
+._J,
+._Q,
+._K,
 ._2,
 ._3 {
 	.middle {
