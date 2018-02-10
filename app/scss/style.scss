@@ -137,7 +137,10 @@ $spade: 	'\2660';
 	}
 }
 ._4,
-._5 {
+._5,
+._6,
+._7,
+._8 {
 	.middle {
 		flex-direction: row;
 		flex-wrap: wrap;
@@ -159,7 +162,8 @@ $spade: 	'\2660';
 		}
 	}
 }
-._5 {
+._5,
+._7 {
 	.middle {
 		span:nth-child(3) {
 			flex-basis: 100%;
@@ -174,6 +178,47 @@ $spade: 	'\2660';
 		}
 	}
 }
+._6, {
+	.middle {
+		span:nth-child(3),
+		span:nth-child(4) {
+			align-items: center;
+		}
+	}
+}
+._7 {
+	.middle {
+		span:nth-child(3) {
+			position: absolute;
+			top: 20%;
+			left: 0;
+			right: 0;
+			margin: auto
+		}
+		span:nth-child(4),
+		span:nth-child(5) {
+			align-items: center;
+		}
+		span:nth-child(6) {
+			justify-content: flex-start;
+		}
+		span:nth-child(7) {
+			justify-content: flex-end;
+		}
+	}
+}
+._8 {
+	.middle {
+		span:nth-child(1n+3) {
+			align-items: center;
+		}
+		span:nth-child(1n+7) {
+			align-items: flex-end;
+		}
+	}
+}
+
+
 .top,
 .bottom {
 	width: 20%;
@@ -189,14 +234,13 @@ $spade: 	'\2660';
 	
 }
 .middle {
-	margin: 0 4vw;
+	margin: -0.5em 4vw;
 	display: flex;
 	border: 1px solid #eee;
 	width: 12vw;
 	height: 19vw;
 	font-size: 6vw;
-	margin-top: -0.5em;
-	margin-bottom: -0.5em;
+	position: relative;
 	span {
 		&:after {
 			line-height: 0.7em;
