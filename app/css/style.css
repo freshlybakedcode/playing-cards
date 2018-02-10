@@ -62,6 +62,7 @@ h1 {
   .card.spades .middle span.king:after {
     content: "king"; }
 
+._A .middle,
 ._2 .middle,
 ._3 .middle {
   -webkit-box-orient: vertical;
@@ -73,6 +74,69 @@ h1 {
           align-items: center;
   -ms-flex-pack: distribute;
       justify-content: space-around; }
+
+._4 .middle,
+._5 .middle {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch; }
+  ._4 .middle span,
+  ._5 .middle span {
+    -ms-flex-preferred-size: 50%;
+        flex-basis: 50%;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start; }
+  ._4 .middle span:nth-child(2n),
+  ._5 .middle span:nth-child(2n) {
+    text-align: right;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end; }
+  ._4 .middle span:nth-child(1n+3),
+  ._5 .middle span:nth-child(1n+3) {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end; }
+
+._5 .middle span:nth-child(3) {
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
+
+._5 .middle span:nth-child(4) {
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start; }
+
+._5 .middle span:nth-child(5) {
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end; }
 
 .top,
 .bottom {
@@ -86,19 +150,25 @@ h1 {
           flex-direction: column;
   -webkit-box-align: center;
       -ms-flex-align: center;
-          align-items: center; }
+          align-items: center;
+  font-size: 3vw; }
   .top:after,
   .bottom:after {
     display: block; }
 
 .middle {
-  margin: 0 1em;
+  margin: 0 4vw;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   border: 1px solid #eee;
-  width: 10vw;
-  height: 15vw; }
+  width: 12vw;
+  height: 19vw;
+  font-size: 6vw;
+  margin-top: -0.5em;
+  margin-bottom: -0.5em; }
+  .middle span:after {
+    line-height: 0.7em; }
 
 .bottom {
   -webkit-transform: rotate(180deg);
