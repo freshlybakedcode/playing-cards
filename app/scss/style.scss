@@ -126,7 +126,11 @@ $spade: 	'\2660';
 		}
 	}
 }
-
+._A {
+	.middle span:after {
+		font-size: 9vw;
+	}
+}
 ._A,
 ._2,
 ._3 {
@@ -141,7 +145,8 @@ $spade: 	'\2660';
 ._6,
 ._7,
 ._8,
-._9 {
+._9,
+._10 {
 	.middle {
 		flex-direction: row;
 		flex-wrap: wrap;
@@ -179,7 +184,7 @@ $spade: 	'\2660';
 		}
 	}
 }
-._6, {
+._6 {
 	.middle {
 		span:nth-child(3),
 		span:nth-child(4) {
@@ -236,7 +241,31 @@ $spade: 	'\2660';
 		}
 	}
 }
-
+._10 {
+	.middle {
+		span:nth-child(3),
+		span:nth-child(7) {
+			position: absolute;
+			left: 0;
+			right: 0;
+			margin: auto;
+			justify-content: center;
+		}
+		span:nth-child(3) {
+			top: 15%;
+		}
+		span:nth-child(7) {
+			top: 65%;
+		}
+		span:nth-child(2n+4) {
+			justify-content: flex-start;
+		}
+		span:nth-child(5),
+		span:nth-child(2n+8) {
+			justify-content: flex-end;
+		}
+	}
+}
 
 .top,
 .bottom {

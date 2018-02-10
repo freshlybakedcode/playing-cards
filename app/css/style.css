@@ -62,6 +62,9 @@ h1 {
   .card.spades .middle span.king:after {
     content: "king"; }
 
+._A .middle span:after {
+  font-size: 9vw; }
+
 ._A .middle,
 ._2 .middle,
 ._3 .middle {
@@ -80,7 +83,8 @@ h1 {
 ._6 .middle,
 ._7 .middle,
 ._8 .middle,
-._9 .middle {
+._9 .middle,
+._10 .middle {
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
@@ -98,7 +102,8 @@ h1 {
   ._6 .middle span,
   ._7 .middle span,
   ._8 .middle span,
-  ._9 .middle span {
+  ._9 .middle span,
+  ._10 .middle span {
     -ms-flex-preferred-size: 50%;
         flex-basis: 50%;
     -webkit-box-orient: horizontal;
@@ -116,7 +121,8 @@ h1 {
   ._6 .middle span:nth-child(2n),
   ._7 .middle span:nth-child(2n),
   ._8 .middle span:nth-child(2n),
-  ._9 .middle span:nth-child(2n) {
+  ._9 .middle span:nth-child(2n),
+  ._10 .middle span:nth-child(2n) {
     text-align: right;
     -webkit-box-pack: end;
         -ms-flex-pack: end;
@@ -126,7 +132,8 @@ h1 {
   ._6 .middle span:nth-child(1n+3),
   ._7 .middle span:nth-child(1n+3),
   ._8 .middle span:nth-child(1n+3),
-  ._9 .middle span:nth-child(1n+3) {
+  ._9 .middle span:nth-child(1n+3),
+  ._10 .middle span:nth-child(1n+3) {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -212,6 +219,33 @@ h1 {
           justify-content: flex-start; }
 
 ._9 .middle span:nth-child(2n+7) {
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end; }
+
+._10 .middle span:nth-child(3),
+._10 .middle span:nth-child(7) {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center; }
+
+._10 .middle span:nth-child(3) {
+  top: 15%; }
+
+._10 .middle span:nth-child(7) {
+  top: 65%; }
+
+._10 .middle span:nth-child(2n+4) {
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start; }
+
+._10 .middle span:nth-child(5),
+._10 .middle span:nth-child(2n+8) {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end; }
