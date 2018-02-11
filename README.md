@@ -12,4 +12,6 @@ Something to do with playing cards
 * `gulp build`
 
 ### To deploy distribution files to Github pages:
-* `gulp deploy-ghp` TODO: Add link
+* `gulp deploy-ghp`
+
+[View now on Github pages](https://freshlybakedcode.github.io/playing-cards/)
