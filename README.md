@@ -1,7 +1,7 @@
-## Webapp boiler plate
+## Playing card generator
 
 ### What is this?
-Something to do with playing cards
+A JS object to create responsive playing cards and output them to the UI
 
 ### How to use
 * Clone
