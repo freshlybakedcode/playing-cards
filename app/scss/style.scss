@@ -81,7 +81,44 @@ $spade: 	'\2660';
 			content: "K";
 		}
 	}
+	.top,
+	.bottom {
+		width: 20%;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		font-size: 3vw;
+		&:after {
+			display: block;
+		}
+	}
+	.top {
+		
+	}
+	.middle {
+		margin: -0.5em 4vw;
+		display: flex;
+		border: 1px solid #eee;
+		width: 12vw;
+		height: 19vw;
+		font-size: 6vw;
+		position: relative;
+		span {
+			&:after {
+				line-height: 0.7em;
+			}
+		}
+	}
+	.bottom {
+		float: right;
+	}
+	.inverted {
+		transform: rotate(180deg);
+		justify-content: flex-end;
+		margin-top: 0.2vw;	//Inverted glyphs naturally have white space which needs compensation
+	}
 }
+
 
 /* Individual layouts */
 ._A {
@@ -110,6 +147,12 @@ $spade: 	'\2660';
 		justify-content: space-around;
 	}
 }
+._2,
+._3 {
+	.middle {
+		justify-content: space-between;
+	}
+}
 ._4,
 ._5,
 ._6,
@@ -129,12 +172,25 @@ $spade: 	'\2660';
 			align-items: flex-start;
 		}
 		span:nth-child(2n) {
-			text-align: right;
 			justify-content: flex-end;
+			&.inverted {
+				justify-content: flex-start;
+			}
 		}
 		span:nth-child(1n+3) {
 			display: flex;
 			align-items: flex-end;
+			&.inverted {
+				align-items: flex-start;
+			}
+		}
+	}
+}
+._3 {
+	.middle {
+		span {
+			display: flex;
+			justify-content: flex-end;
 		}
 	}
 }
@@ -148,9 +204,15 @@ $spade: 	'\2660';
 		}
 		span:nth-child(4) {
 			justify-content: flex-start;
+			&.inverted {
+				justify-content: flex-end;
+			}
 		}
 		span:nth-child(5) {
 			justify-content: flex-end;
+			&.inverted {
+				justify-content: flex-start;
+			}
 		}
 	}
 }
@@ -175,11 +237,11 @@ $spade: 	'\2660';
 		span:nth-child(5) {
 			align-items: center;
 		}
-		span:nth-child(6) {
-			justify-content: flex-start;
-		}
-		span:nth-child(7) {
+		span.inverted:nth-child(6) {
 			justify-content: flex-end;
+		}
+		span.inverted:nth-child(7) {
+			justify-content: flex-start;
 		}
 	}
 }
@@ -203,11 +265,11 @@ $spade: 	'\2660';
 			margin: auto;
 			justify-content: center;
 		}
-		span:nth-child(2n+6) {
-			justify-content: flex-start;
-		}
-		span:nth-child(2n+7) {
+		span.inverted:nth-child(2n+6) {
 			justify-content: flex-end;
+		}
+		span.inverted:nth-child(2n+7) {
+			justify-content: flex-start;
 		}
 	}
 }
@@ -229,43 +291,16 @@ $spade: 	'\2660';
 		}
 		span:nth-child(2n+4) {
 			justify-content: flex-start;
+			&.inverted {
+				justify-content: flex-end;
+			}
 		}
 		span:nth-child(5),
 		span:nth-child(2n+8) {
 			justify-content: flex-end;
+			&.inverted {
+				justify-content: flex-start;
+			}
 		}
 	}
-}
-
-.top,
-.bottom {
-	width: 20%;
-	display: flex;
-    flex-direction: column;
-	align-items: center;
-	font-size: 3vw;
-	&:after {
-		display: block;
-	}
-}
-.top {
-	
-}
-.middle {
-	margin: -0.5em 4vw;
-	display: flex;
-	border: 1px solid #eee;
-	width: 12vw;
-	height: 19vw;
-	font-size: 6vw;
-	position: relative;
-	span {
-		&:after {
-			line-height: 0.7em;
-		}
-	}
-}
-.bottom {
-	transform: rotate(180deg);
-	float: right;
 }

@@ -44,6 +44,44 @@ h1 {
     content: "Q"; }
   .card .middle span.king:after {
     content: "K"; }
+  .card .top,
+  .card .bottom {
+    width: 20%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    font-size: 3vw; }
+    .card .top:after,
+    .card .bottom:after {
+      display: block; }
+  .card .middle {
+    margin: -0.5em 4vw;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    border: 1px solid #eee;
+    width: 12vw;
+    height: 19vw;
+    font-size: 6vw;
+    position: relative; }
+    .card .middle span:after {
+      line-height: 0.7em; }
+  .card .bottom {
+    float: right; }
+  .card .inverted {
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    margin-top: 0.2vw; }
 
 /* Individual layouts */
 ._A .middle span:after {
@@ -70,6 +108,12 @@ h1 {
           align-items: center;
   -ms-flex-pack: distribute;
       justify-content: space-around; }
+
+._2 .middle,
+._3 .middle {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between; }
 
 ._4 .middle,
 ._5 .middle,
@@ -116,10 +160,19 @@ h1 {
   ._8 .middle span:nth-child(2n),
   ._9 .middle span:nth-child(2n),
   ._10 .middle span:nth-child(2n) {
-    text-align: right;
     -webkit-box-pack: end;
         -ms-flex-pack: end;
             justify-content: flex-end; }
+    ._4 .middle span:nth-child(2n).inverted,
+    ._5 .middle span:nth-child(2n).inverted,
+    ._6 .middle span:nth-child(2n).inverted,
+    ._7 .middle span:nth-child(2n).inverted,
+    ._8 .middle span:nth-child(2n).inverted,
+    ._9 .middle span:nth-child(2n).inverted,
+    ._10 .middle span:nth-child(2n).inverted {
+      -webkit-box-pack: start;
+          -ms-flex-pack: start;
+              justify-content: flex-start; }
   ._4 .middle span:nth-child(1n+3),
   ._5 .middle span:nth-child(1n+3),
   ._6 .middle span:nth-child(1n+3),
@@ -133,6 +186,24 @@ h1 {
     -webkit-box-align: end;
         -ms-flex-align: end;
             align-items: flex-end; }
+    ._4 .middle span:nth-child(1n+3).inverted,
+    ._5 .middle span:nth-child(1n+3).inverted,
+    ._6 .middle span:nth-child(1n+3).inverted,
+    ._7 .middle span:nth-child(1n+3).inverted,
+    ._8 .middle span:nth-child(1n+3).inverted,
+    ._9 .middle span:nth-child(1n+3).inverted,
+    ._10 .middle span:nth-child(1n+3).inverted {
+      -webkit-box-align: start;
+          -ms-flex-align: start;
+              align-items: flex-start; }
+
+._3 .middle span {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end; }
 
 ._5 .middle span:nth-child(3),
 ._7 .middle span:nth-child(3) {
@@ -150,12 +221,22 @@ h1 {
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start; }
+  ._5 .middle span:nth-child(4).inverted,
+  ._7 .middle span:nth-child(4).inverted {
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end; }
 
 ._5 .middle span:nth-child(5),
 ._7 .middle span:nth-child(5) {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end; }
+  ._5 .middle span:nth-child(5).inverted,
+  ._7 .middle span:nth-child(5).inverted {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start; }
 
 ._6 .middle span:nth-child(3),
 ._6 .middle span:nth-child(4) {
@@ -176,15 +257,15 @@ h1 {
       -ms-flex-align: center;
           align-items: center; }
 
-._7 .middle span:nth-child(6) {
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start; }
-
-._7 .middle span:nth-child(7) {
+._7 .middle span.inverted:nth-child(6) {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end; }
+
+._7 .middle span.inverted:nth-child(7) {
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start; }
 
 ._8 .middle span:nth-child(1n+3) {
   -webkit-box-align: center;
@@ -206,15 +287,15 @@ h1 {
       -ms-flex-pack: center;
           justify-content: center; }
 
-._9 .middle span:nth-child(2n+6) {
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start; }
-
-._9 .middle span:nth-child(2n+7) {
+._9 .middle span.inverted:nth-child(2n+6) {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end; }
+
+._9 .middle span.inverted:nth-child(2n+7) {
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start; }
 
 ._10 .middle span:nth-child(3),
 ._10 .middle span:nth-child(7) {
@@ -236,45 +317,18 @@ h1 {
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start; }
+  ._10 .middle span:nth-child(2n+4).inverted {
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end; }
 
 ._10 .middle span:nth-child(5),
 ._10 .middle span:nth-child(2n+8) {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end; }
-
-.top,
-.bottom {
-  width: 20%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  font-size: 3vw; }
-  .top:after,
-  .bottom:after {
-    display: block; }
-
-.middle {
-  margin: -0.5em 4vw;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  border: 1px solid #eee;
-  width: 12vw;
-  height: 19vw;
-  font-size: 6vw;
-  position: relative; }
-  .middle span:after {
-    line-height: 0.7em; }
-
-.bottom {
-  -webkit-transform: rotate(180deg);
-          transform: rotate(180deg);
-  float: right; }
+  ._10 .middle span:nth-child(5).inverted,
+  ._10 .middle span:nth-child(2n+8).inverted {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start; }

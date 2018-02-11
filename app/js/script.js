@@ -1,3 +1,5 @@
+'use strict';
+
 let deck = [];
 const suits = ['clubs', 'diamonds', 'hearts', 'spades'];
 const face = ['A', '2', '3', '4', '5', '6', '7', '8', '9', '10', 'J', 'Q', 'K'];
@@ -5,7 +7,7 @@ const face = ['A', '2', '3', '4', '5', '6', '7', '8', '9', '10', 'J', 'Q', 'K'];
 const createDeck = function createDeck(deckArrayName) {
     suits.forEach(function(suit) {
         face.forEach(function(face, index) {
-            var card = {
+            const card = {
                 face,
                 suit,
                 value: index + 1,
@@ -30,12 +32,18 @@ const shuffleDeck = function shuffleDeck(deck) {
 };
 const createUI = function createUI(deck, insertPosition) {
     deck.forEach(function(element) {
-        // create a new div element 
+        // Create a new div element 
         const newCard = document.createElement("div");
         let symbols = '';
         if (element.value < 11) {
-            for (i = 0; i < element.value; i++) {
-                symbols += `<span></span>`;
+            for (let i = 0; i < element.value; i++) {
+                let invertedModifier = 0;   //6 & 7 need a tweak to calculate which glyphs need inverting
+                element.value === 6 || element.value === 7 ? invertedModifier = 1 : invertedModifier = 0;
+                if (i >= Math.ceil(element.value / 2) + invertedModifier) {
+                    symbols += `<span class="inverted"></span>`;
+                } else {
+                    symbols += `<span></span>`;
+                }
             };
         } else if (element.value === 11) {
             symbols = `<span class="jack"></span>`;
@@ -50,9 +58,9 @@ const createUI = function createUI(deck, insertPosition) {
         newCard.innerHTML = `
             <span class="top">${element.face}</span>
             <span class="middle">${symbols}</span>
-            <span class="bottom">${element.face}</span>
+            <span class="bottom inverted">${element.face}</span>
         `;
-        //Insert it into defined div
+        // Insert it into defined div
         insertPosition.appendChild(newCard);
     });
 };
