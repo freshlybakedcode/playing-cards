@@ -14,14 +14,13 @@ $heart:		'\2665';
 $spade: 	'\2660';
 
 .card {
-	border: 1px solid #ccc;
-	border-radius: 3px;
 	float: left;
 	padding: 0.1em;
 	margin: 1vw;
-	box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.2);
 	font-family: Georgia, 'Times New Roman', Times, serif;
-	
+	position: relative;
+	width: 20vw;
+	height: 27vw;
 	&.clubs,
 	&.spades {
 		color: black;
@@ -113,6 +112,43 @@ $spade: 	'\2660';
 		transform: rotate(180deg);
 		justify-content: flex-end;
 		margin-top: 0.2vw;	//Inverted glyphs naturally have white space which needs compensation
+	}
+	.card-front,
+	.card-back {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		backface-visibility: hidden;
+		transition: transform 0.3s, background-color 0.5s ease-out 1.2s;
+		justify-content: flex-end;
+		border-radius: 4px;
+		box-shadow: 1px 1px 10px 0px rgba(0, 0, 0, 0.2);
+	}
+	.card-front {
+		background-color: white;
+		border: 1px solid #ccc;
+		border-radius: 3px;
+		transform: rotateY(-180deg);
+		flex-direction: column;
+		justify-content: center;
+		text-align: center;
+		font-size: 15vw;
+	}
+	.card-back {
+		background-color: #556; //http://lea.verou.me/css3patterns/#japanese-cube
+		background-image: linear-gradient(30deg, #445 12%, transparent 12.5%, transparent 87%, #445 87.5%, #445), linear-gradient(150deg, #445 12%, transparent 12.5%, transparent 87%, #445 87.5%, #445), linear-gradient(30deg, #445 12%, transparent 12.5%, transparent 87%, #445 87.5%, #445), linear-gradient(150deg, #445 12%, transparent 12.5%, transparent 87%, #445 87.5%, #445), linear-gradient(60deg, #99a 25%, transparent 25.5%, transparent 75%, #99a 75%, #99a), linear-gradient(60deg, #99a 25%, transparent 25.5%, transparent 75%, #99a 75%, #99a);
+		background-size: 80px 140px;
+		background-position: 0 0, 0 0, 40px 70px, 40px 70px, 0 0, 40px 70px;
+	}
+	&.face-up {
+		.card-front {
+			transform: rotateY(0);
+		}
+		.card-back {
+			transform: rotateY(-180deg);
+		}
 	}
 }
 

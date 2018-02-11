@@ -10,14 +10,13 @@ h1 {
   text-align: center; }
 
 .card {
-  border: 1px solid #ccc;
-  border-radius: 3px;
   float: left;
   padding: 0.1em;
   margin: 1vw;
-  -webkit-box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.2);
-          box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.2);
-  font-family: Georgia, 'Times New Roman', Times, serif; }
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  position: relative;
+  width: 20vw;
+  height: 27vw; }
   .card.clubs, .card.spades {
     color: black; }
   .card.hearts, .card.diamonds {
@@ -82,6 +81,51 @@ h1 {
         -ms-flex-pack: end;
             justify-content: flex-end;
     margin-top: 0.2vw; }
+  .card .card-front,
+  .card .card-back {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+    -webkit-transition: background-color 0.5s ease-out 1.2s, -webkit-transform 0.3s;
+    transition: background-color 0.5s ease-out 1.2s, -webkit-transform 0.3s;
+    transition: transform 0.3s, background-color 0.5s ease-out 1.2s;
+    transition: transform 0.3s, background-color 0.5s ease-out 1.2s, -webkit-transform 0.3s;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    border-radius: 4px;
+    -webkit-box-shadow: 1px 1px 10px 0px rgba(0, 0, 0, 0.2);
+            box-shadow: 1px 1px 10px 0px rgba(0, 0, 0, 0.2); }
+  .card .card-front {
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    -webkit-transform: rotateY(-180deg);
+            transform: rotateY(-180deg);
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    text-align: center;
+    font-size: 15vw; }
+  .card .card-back {
+    background-color: #556;
+    background-image: linear-gradient(30deg, #445 12%, transparent 12.5%, transparent 87%, #445 87.5%, #445), linear-gradient(150deg, #445 12%, transparent 12.5%, transparent 87%, #445 87.5%, #445), linear-gradient(30deg, #445 12%, transparent 12.5%, transparent 87%, #445 87.5%, #445), linear-gradient(150deg, #445 12%, transparent 12.5%, transparent 87%, #445 87.5%, #445), linear-gradient(60deg, #99a 25%, transparent 25.5%, transparent 75%, #99a 75%, #99a), linear-gradient(60deg, #99a 25%, transparent 25.5%, transparent 75%, #99a 75%, #99a);
+    background-size: 80px 140px;
+    background-position: 0 0, 0 0, 40px 70px, 40px 70px, 0 0, 40px 70px; }
+  .card.face-up .card-front {
+    -webkit-transform: rotateY(0);
+            transform: rotateY(0); }
+  .card.face-up .card-back {
+    -webkit-transform: rotateY(-180deg);
+            transform: rotateY(-180deg); }
 
 /* Individual layouts */
 ._A .middle span:after {
