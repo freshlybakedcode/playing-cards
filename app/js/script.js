@@ -1,6 +1,6 @@
 'use strict';
 
-const Cards = {
+const cards = {
     suits: ['clubs', 'diamonds', 'hearts', 'spades'],
     face: ['A', '2', '3', '4', '5', '6', '7', '8', '9', '10', 'J', 'Q', 'K'],
     createDeck: function createDeck(deckArrayName, faceUp) {
@@ -73,7 +73,7 @@ const Cards = {
 
 let deck = [];
 
-Cards.createDeck(deck, true);   //Create new deck, cards face up
-Cards.shuffleDeck(deck);
-Cards.createUI(deck, table)
+cards.createDeck(deck, true);   //Create new deck, cards face up
+cards.shuffleDeck(deck);
+cards.createUI(deck, table)
 console.table(deck);
