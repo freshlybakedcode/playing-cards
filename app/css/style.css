@@ -72,8 +72,9 @@ h1 {
     position: relative; }
     .card .middle span:after {
       line-height: 0.7em; }
-  .card .bottom {
-    float: right; }
+  .card .bottom.inverted {
+    float: right;
+    margin-top: 0; }
   .card .inverted {
     -webkit-transform: rotate(180deg);
             transform: rotate(180deg);

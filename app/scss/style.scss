@@ -106,7 +106,10 @@ $spade: 	'\2660';
 		}
 	}
 	.bottom {
-		float: right;
+		&.inverted {
+			float: right;
+			margin-top: 0;
+		}
 	}
 	.inverted {
 		transform: rotate(180deg);
